@@ -112,6 +112,32 @@ header p {
   );
 }
 
+/* Animaciones index */
+.article__img-anime:hover,
+.article__img-videojuegos:hover {
+  transform: scale(1.15);
+}
+
+.text {
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-name: cambio_texto;
+  font-size: 1.5rem;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cambio_texto {
+  from {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  to {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+}
 
 .footer {
   display: flex;
@@ -125,7 +151,51 @@ header p {
     rgba(183, 183, 183, 1) 80%
   );
 
-  
+  animation-name: entrar_footer;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes entrar_footer {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.article__img-anime{
+  animation-name: entrar_img-anime;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes entrar_img-anime{
+  from{
+    margin-left: 100%;
+  }
+
+  to{
+    margin-left: 0%;
+  }
+}
+
+.article__img-videojuegos{
+  animation-name: entrar_img-videojuegos;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes entrar_img-videojuegos{
+  from{
+    margin-right: 100%;
+  }
+
+  to{
+    margin-right: 0%;
+  }
 }
 
 
@@ -193,7 +263,45 @@ header p {
   grid-area: img4;
 }
 
+/* Animaciones TopAnimes y TopVideojuegos */
 
+.img1,.img3{
+  animation-name: entrar__img13;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes entrar__img13{
+  from{
+    margin-right: 100%;
+  }
+
+  to{
+    margin-right: 0%;
+  }
+}
+
+.img2,.img4{
+  animation-name: entrar__img24;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes entrar__img24{
+  from{
+    margin-left: 100%;
+  }
+
+  to{
+    margin-left: 0%;
+  }
+}
+
+.img1:hover, .img2:hover, .img3:hover,.img4:hover{
+  transform: scale(1.5);
+}
 /* Nosotros */
 
 .main__nosotros {
@@ -284,7 +392,22 @@ header p {
     padding: 2%;
   }
 
-  
+  /* Animaciones Index */
+  .text__anime{
+    animation-name: entrar__anime-768;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5 s;
+  }
+
+  @keyframes entrar__anime-768{
+    from{
+      margin-right: 100%;
+    }
+
+    to{
+      margin-right: 0%;
+    }
   }
 
   .text__videojuego{
@@ -303,6 +426,8 @@ header p {
       margin-left: 0%;
     }
   }
+
+}
 
 
 
@@ -423,4 +548,24 @@ header p {
     padding-bottom: 2%;
   }
 
+  /* Animaciones 1200px */
+
+  .article__index{
+    animation-name: subir_index;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes subir_index{
+    from{
+      margin-top: 100%;
+      
+    }
+
+    to{
+      margin-top: 0%;
+      
+    }
+  }
 }
