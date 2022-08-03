@@ -31,6 +31,23 @@ header p {
   text-align: justify;
 }
 
+.navbar-toggler{
+  background-color: gray;
+  border: none;
+}
+
+
+.navbar-brand{
+  font-size: 1.5rem;
+  color: gray;
+  font-weight: bolder;
+}
+
+.nav-link{
+  color: gray;
+  font-weight: bold;
+}
+
 .grid__container {
   display: grid;
   justify-content: center;
@@ -63,46 +80,7 @@ header p {
   border-radius: 5%;
 }
 
-
-/* .nav__index,
-.nav__pages {
-  display: flex;
-  padding-top: 1%;
-  justify-content: center;
-}
-
-.nav__index ul li,
-.nav__pages ul li {
-  border: 5px ridge #7f8c8d;
-  align-content: center;
-}
-
-.ul__index,
-.ul__pages {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
  
-.a__index,
-.a__pages {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  animation-delay: 0.2;
-}
-
-.a__index:hover {
-  color: blue;
-}
-
-.a__pages:hover {
-  color: blue;
-} */
-
-
-
 /* Animaciones index */
 .article__img-anime:hover,
 .article__img-videojuegos:hover {
@@ -147,6 +125,7 @@ header p {
   animation-iteration-count: 1;
 }
 
+
 @keyframes entrar_footer {
   from {
     margin-left: 100%;
@@ -156,6 +135,11 @@ header p {
     margin-left: 0%;
   }
 }
+
+.footer__index-p{
+  padding-top: 1%;
+}
+
 
 .article__img-anime{
   animation-name: entrar_img-anime;
@@ -254,10 +238,6 @@ header p {
   grid-area: img4;
 }
 
-.dropdown-menu-dark .dropdown-item, .dropdown-item.active{
-  color: whitesmoke;
-}
-
 
 /* Animaciones TopAnimes y TopVideojuegos */
 
@@ -337,8 +317,8 @@ header p {
 }
 
 @media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2rem;
+  .text {
+    font-size: 2.5rem;
   }
   .grid__container {
     display: grid;
@@ -438,17 +418,30 @@ header p {
   }
 
   .text {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: bolder;
   }
 
   .grid__container {
     display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 1fr 1fr 0.5fr;
-    grid-template-areas: "anime videojuegos nav";
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav nav"
+                         "anime videojuegos";
     align-items: center;
   }
 
+  .grid__container > .navbar{
+    grid-area: nav;
+  }
+
+  .navbar-brand{
+    font-size: 2rem;
+  }
+
+  .container-fluid{
+    font-size: 2rem;
+  }
   .article__index {
     display: flex;
     flex-direction: column;
@@ -463,25 +456,20 @@ header p {
     border-radius: 5%;
   }
 
-  .nav__index {
-    align-items: center;
-    font-size: 1.5rem;
-  }
-
-  /* TopAnimes y TopVideojuegos */
+   /* TopAnimes y TopVideojuegos */
 
   .grid__container-top-animes,
   .grid__container-top-videojuegos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.4fr 1fr 1fr;
-    grid-template-areas:
-      "nav nav"
-      "img1 img2"
-      "img3 img4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-areas:"nav nav"
+                        "img1 img2"
+                        "img3 img4";
+    
   }
 
-  .grid__container-top-animes > .nav__pages {
+  .grid__container-top-animes > .container-fluid-anime {
     grid-area: nav;
   }
 
