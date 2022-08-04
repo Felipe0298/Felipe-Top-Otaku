@@ -31,19 +31,18 @@ header p {
   text-align: justify;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   background-color: gray;
   border: none;
 }
 
-
-.navbar-brand{
+.navbar-brand {
   font-size: 1.5rem;
   color: gray;
   font-weight: bolder;
 }
 
-.nav-link{
+.nav-link {
   color: gray;
   font-weight: bold;
 }
@@ -51,13 +50,9 @@ header p {
 .grid__container {
   display: grid;
   justify-content: center;
-
   grid-template-columns: 80%;
   grid-template-rows: repeat(3 1fr);
-  grid-template-areas:
-    "nav"
-    "anime"
-    "videojuegos";
+  grid-template-areas: "nav" "anime" "videojuegos";
 }
 
 .grid__container > .nav__index {
@@ -80,7 +75,6 @@ header p {
   border-radius: 5%;
 }
 
- 
 /* Animaciones index */
 .article__img-anime:hover,
 .article__img-videojuegos:hover {
@@ -88,12 +82,28 @@ header p {
 }
 
 .text {
-  animation-delay: 0.5s;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-name: cambio_texto;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: cambio_texto;
+          animation-name: cambio_texto;
   font-size: 1.5rem;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cambio_texto {
+  from {
+    font-size: 1.2rem;
+    color: black;
+  }
+  to {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
 }
 
 @keyframes cambio_texto {
@@ -101,89 +111,104 @@ header p {
     font-size: 1.2rem;
     color: black;
   }
-
   to {
     font-size: 2rem;
     font-weight: bolder;
   }
 }
-
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: rgb(232, 232, 232);
-  background: radial-gradient(
-    circle,
-    rgba(232, 232, 232, 1) 55%,
-    rgba(183, 183, 183, 1) 80%
-  );
-
-  animation-name: entrar_footer;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+  background: radial-gradient(circle, rgb(232, 232, 232) 55%, rgb(183, 183, 183) 80%);
+  -webkit-animation-name: entrar_footer;
+          animation-name: entrar_footer;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-
-@keyframes entrar_footer {
+@-webkit-keyframes entrar_footer {
   from {
     margin-left: 100%;
   }
-
   to {
     margin-left: 0%;
   }
 }
 
-.footer__index-p{
+@keyframes entrar_footer {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.footer__index-p {
   padding-top: 1%;
 }
 
-
-.article__img-anime{
-  animation-name: entrar_img-anime;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+.article__img-anime {
+  -webkit-animation-name: entrar_img-anime;
+          animation-name: entrar_img-anime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-@keyframes entrar_img-anime{
-  from{
+@-webkit-keyframes entrar_img-anime {
+  from {
     margin-left: 100%;
   }
-
-  to{
+  to {
     margin-left: 0%;
   }
 }
 
-.article__img-videojuegos{
-  animation-name: entrar_img-videojuegos;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+@keyframes entrar_img-anime {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.article__img-videojuegos {
+  -webkit-animation-name: entrar_img-videojuegos;
+          animation-name: entrar_img-videojuegos;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-@keyframes entrar_img-videojuegos{
-  from{
+@-webkit-keyframes entrar_img-videojuegos {
+  from {
     margin-right: 100%;
   }
-
-  to{
+  to {
     margin-right: 0%;
   }
 }
 
+@keyframes entrar_img-videojuegos {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
 /* Organizando Top Animes */
-
 .grid__container-top-animes,
 .grid__container-top-videojuegos {
   display: grid;
-  grid-template-areas:
-    "nav"
-    "img1"
-    "img2"
-    "img3"
-    "img4";
+  grid-template-areas: "nav" "img1" "img2" "img3" "img4";
   grid-template-columns: 80%;
   grid-template-rows: repeat(5 1fr);
   justify-content: center;
@@ -208,7 +233,6 @@ header p {
 .grid__container-top-animes > .img__anime4 {
   grid-area: img4;
 }
-
 
 .imgs__anime,
 .imgs__videojuegos {
@@ -238,52 +262,73 @@ header p {
   grid-area: img4;
 }
 
-
 /* Animaciones TopAnimes y TopVideojuegos */
-
-.img1,.img3{
-  animation-name: entrar__img13;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+.img1, .img3 {
+  -webkit-animation-name: entrar__img13;
+          animation-name: entrar__img13;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-@keyframes entrar__img13{
-  from{
+@-webkit-keyframes entrar__img13 {
+  from {
     margin-right: 100%;
   }
-
-  to{
+  to {
     margin-right: 0%;
   }
 }
 
-.img2,.img4{
-  animation-name: entrar__img24;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+@keyframes entrar__img13 {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+.img2, .img4 {
+  -webkit-animation-name: entrar__img24;
+          animation-name: entrar__img24;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-@keyframes entrar__img24{
-  from{
+@-webkit-keyframes entrar__img24 {
+  from {
     margin-left: 100%;
   }
-
-  to{
+  to {
     margin-left: 0%;
   }
 }
 
-.img1:hover, .img2:hover, .img3:hover,.img4:hover{
+@keyframes entrar__img24 {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover {
   transform: scale(1.5);
 }
-/* Nosotros */
 
+/* Nosotros */
 .main__nosotros {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .main__nosotros nav {
   padding-bottom: 2%;
 }
@@ -297,7 +342,6 @@ header p {
 }
 
 /* Contacto */
-
 .img__contacto {
   display: none;
 }
@@ -325,121 +369,121 @@ header p {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3 1fr);
   }
-
   .article__index--anime {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
-
   .article__index--videojuegos {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
   }
-
   .article__index {
     padding: 1%;
   }
-
   .p-nosotros {
     font-size: 1.2em;
     margin: 1%;
   }
-
   .p__contacto {
     font-size: 1.3rem;
     text-align: left;
   }
-
   .img__contacto {
     display: block;
     width: 45vw;
     height: 35vh;
     border-radius: 3%;
   }
-
   .section__contacto {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 2%;
   }
-
   /* Animaciones Index */
-  .text__anime{
-    animation-name: entrar__anime-768;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5 s;
+  .text__anime {
+    -webkit-animation-name: entrar__anime-768;
+            animation-name: entrar__anime-768;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.5 s;
+            animation-duration: 1.5 s;
   }
-
-  @keyframes entrar__anime-768{
-    from{
+  @-webkit-keyframes entrar__anime-768 {
+    from {
       margin-right: 100%;
     }
-
-    to{
+    to {
       margin-right: 0%;
     }
   }
-
-  .text__videojuego{
-    animation-name: entrar__videojuegos-768;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5 s;
+  @keyframes entrar__anime-768 {
+    from {
+      margin-right: 100%;
+    }
+    to {
+      margin-right: 0%;
+    }
   }
-
-  @keyframes entrar__videojuegos-768{
-    from{
+  .text__videojuego {
+    -webkit-animation-name: entrar__videojuegos-768;
+            animation-name: entrar__videojuegos-768;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.5 s;
+            animation-duration: 1.5 s;
+  }
+  @-webkit-keyframes entrar__videojuegos-768 {
+    from {
       margin-left: 100%;
     }
-
-    to{
+    to {
       margin-left: 0%;
     }
   }
-
+  @keyframes entrar__videojuegos-768 {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
 }
-
-
-
 @media screen and (min-width: 1200px) {
   header h1 {
     font-size: 4rem;
   }
-
   header p {
     font-size: 1.7rem;
     text-align: justify;
   }
-
   .text {
     font-size: 3rem;
     font-weight: bolder;
   }
-
   .grid__container {
     display: grid;
     grid-template-rows: 0.3fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nav nav"
-                         "anime videojuegos";
+    grid-template-areas: "nav nav" "anime videojuegos";
     align-items: center;
   }
-
-  .grid__container > .navbar{
+  .grid__container > .navbar {
     grid-area: nav;
   }
-
-  .navbar-brand{
+  .navbar-brand {
     font-size: 2rem;
   }
-
-  .container-fluid{
+  .container-fluid {
     font-size: 2rem;
   }
   .article__index {
@@ -447,120 +491,88 @@ header p {
     flex-direction: column;
     justify-content: center;
   }
-
   .article__img-anime,
-  .article__img-videojuegos {
+.article__img-videojuegos {
     width: 70%;
     height: 45vh;
     padding: 1%;
     border-radius: 5%;
   }
-
-   /* TopAnimes y TopVideojuegos */
-
+  /* TopAnimes y TopVideojuegos */
   .grid__container-top-animes,
-  .grid__container-top-videojuegos {
+.grid__container-top-videojuegos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.3fr 1fr 1fr;
-    grid-template-areas:"nav nav"
-                        "img1 img2"
-                        "img3 img4";
-    
+    grid-template-areas: "nav nav" "img1 img2" "img3 img4";
   }
-
-  .grid__container-top-animes > .navbar {
+  .grid__container-top-animes > .container-fluid-anime {
     grid-area: nav;
   }
-
   .grid__container-top-animes > .img__anime1 {
     grid-area: img1;
   }
-
   .grid__container-top-animes > .img__anime2 {
     grid-area: img2;
   }
-
   .grid__container-top-animes > .img__anime3 {
     grid-area: img3;
   }
-
   .grid__container-top-animes > .img__anime4 {
     grid-area: img4;
   }
-
-  .grid__container-top-videojuegos > .navbar {
-    grid-area: nav;
-  }
-
-  .grid__container-top-videojuegos > .img__videojuego1 {
-    grid-area: img1;
-  }
-
-  .grid__container-top-videojuegos > .img__videojuego2 {
-    grid-area: img2;
-  }
-
-  .grid__container-top-videojuegos > .img__videojuego3 {
-    grid-area: img3;
-  }
-
-  .grid__container-top-videojuegos > .img__videojuego4 {
-    grid-area: img4;
-  }
-
   .article__img-anime,
-  .article__img-videojuegos {
+.article__img-videojuegos {
     width: 60%;
     height: 45vh;
     padding: 1%;
     border-radius: 5%;
   }
-
   .p-nosotros {
     font-size: 1.9rem;
   }
-
   .main__nosotros {
     display: flex;
     flex-direction: column-reverse;
   }
-
   .div__contacto {
     display: flex;
     flex-direction: column-reverse;
   }
-
   .form__title {
     font-size: 2.5rem;
   }
-
   .form__input {
     font-size: 1.5rem;
   }
-
   .nav__pages-contacto {
     padding-bottom: 2%;
   }
-
   /* Animaciones 1200px */
-
-  .article__index{
-    animation-name: subir_index;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  .article__index {
+    -webkit-animation-name: subir_index;
+            animation-name: subir_index;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-
-  @keyframes subir_index{
-    from{
+  @-webkit-keyframes subir_index {
+    from {
       margin-top: 100%;
-      
     }
-
-    to{
+    to {
       margin-top: 0%;
-      
     }
   }
-}
+  @keyframes subir_index {
+    from {
+      margin-top: 100%;
+    }
+    to {
+      margin-top: 0%;
+    }
+  }
+}/*# sourceMappingURL=estilos.css.map */
