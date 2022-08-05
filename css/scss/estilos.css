@@ -504,10 +504,10 @@ header p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.3fr 1fr 1fr;
-    grid-template-areas: "nav nav" "img1 img2" "img3 img4";
+    grid-template-areas: "nav1 nav1" "img1 img2" "img3 img4";
   }
   .grid__container-top-animes > .container-fluid-anime {
-    grid-area: nav;
+    grid-area: nav1;
   }
   .grid__container-top-animes > .img__anime1 {
     grid-area: img1;
