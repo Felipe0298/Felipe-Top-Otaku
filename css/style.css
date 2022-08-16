@@ -1,6 +1,11 @@
 @charset "UTF-8";
-/* Importar */ 
+/* Importar */ /* Fuentes */
+/* Espaciado */
+/* Colores */
+/* Animaciones */
 /* Variables */
+/* mixin */
+/* Map */
 /* Codigo */
 * {
   padding: 0px;
@@ -155,10 +160,10 @@ footer {
           animation-name: tranparencia;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -262,6 +267,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 2%;
+    gap: 7rem;
   }
 }
 @media screen and (min-width: 1200px) {

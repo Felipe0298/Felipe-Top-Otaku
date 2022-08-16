@@ -1,0 +1,195 @@
+/* Pagina con tamaño de minimo 768px */
+
+@media screen and (min-width: 768px)  {
+
+    /* Index */
+    
+    .navbar-brand {
+      font-size: $tamano*1.5;
+    }
+
+    .nav-link{
+      font-size: $tamano*1.35;
+    }
+    
+    h1{
+      font-size: $tamano*2.3;
+    }
+
+    header p{
+      font-size: $tamano*1.3;
+    }
+
+    .text{
+      font-size: $tamano*2;
+    }
+
+    .grid__container{
+      
+      grid-template-columns: 80%;
+      grid-template-rows: 1fr 1fr;  
+      
+    }
+
+    .article__index--anime{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content:space-around;
+    }
+
+    .article__index--videojuegos{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content:space-around;
+    }
+    
+    /* Nosotros */
+
+    .p-nosotros{
+      font-size: $tamano*1.2;
+    }
+
+    /* Contacto */
+    .img__contacto {
+      display: block;
+      @include sizes(45vw,35vh);
+      border-radius: $borde;
+    }
+
+    .section__contacto {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 2%;
+      gap: 7rem;
+      
+    }
+  
+  }
+
+  @media screen and (min-width: 1200px)  {
+    
+    /* Index */
+    
+    .navbar-brand {
+      font-size: $tamano*2;
+    }
+
+    .nav-link{
+      font-size: $tamano*1.75;
+    }
+    
+    h1{
+      font-size: $tamano*3.6;
+    }
+
+    header p{
+      font-size: $tamano*1.9;
+    }
+
+    .text{
+      font-size: $tamano*3;
+    }
+
+    .grid__container{
+      
+      grid-template-areas: "anime videojuegos";
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr;  
+      
+    }
+
+    .grid__container > .article__index--anime{
+      grid-area: anime;
+    }
+
+    .grid__container > .article__index--videojuegos{
+      grid-area: videojuegos;
+    }
+
+
+    .article__index--anime{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 2%;
+    }
+
+    .article__index--videojuegos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .article__img-anime,
+    .article__img-videojuegos {
+      @include sizes(70%,45vh);
+            
+    }
+  
+
+    /* Top Animes y Top Videojuegos */
+
+    .grid__container-top-animes, .grid__container-top-videojuegos{
+      display: grid;
+      grid-template-areas: "img1 img2"
+                            "img3 img4";
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    
+
+  .grid__container-top-animes > .img__anime1 {
+    grid-area: img1;
+  }
+
+  .grid__container-top-animes > .img__anime2 {
+    grid-area: img2;
+  }
+
+  .grid__container-top-animes > .img__anime3 {
+    grid-area: img3;
+  }
+
+  .grid__container-top-animes > .img__anime4 {
+    grid-area: img4;
+  }
+
+
+  .grid__container-top-videojuegos > .img__videojuego1 {
+    grid-area: img1;
+  }
+
+  .grid__container-top-videojuegos > .img__videojuego2 {
+    grid-area: img2;
+  }
+
+  .grid__container-top-videojuegos > .img__videojuego3 {
+    grid-area: img3;
+  }
+
+  .grid__container-top-videojuegos > .img__videojuego4 {
+    grid-area: img4;
+  }
+
+  .article__img-anime, .article__img-videojuegos {
+    @include sizes(60%,45vh);
+        
+  }
+
+  /* Nosotros */
+
+  .p-nosotros{
+    font-size: $tamano*1.6;
+  }
+
+  /* Contacto */
+
+  .p__contacto{
+    font-size: $tamano*1.6;
+  }
+
+  }
