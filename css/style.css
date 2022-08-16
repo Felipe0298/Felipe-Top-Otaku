@@ -217,6 +217,11 @@ footer {
   margin-bottom: 3%;
 }
 
+/* Pages Animes y Videojuegos */
+.p__pages-anime, .p__pages-videojuegos {
+  text-align: justify;
+}
+
 /* Pagina con tamaño de minimo 768px */
 @media screen and (min-width: 768px) {
   /* Index */
@@ -268,6 +273,10 @@ footer {
     justify-content: space-evenly;
     padding: 2%;
     gap: 7rem;
+  }
+  /* Pages Animes y Videojuegos */
+  .p__pages-anime, .p__pages-videojuegos {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -355,6 +364,10 @@ footer {
   }
   /* Contacto */
   .p__contacto {
+    font-size: 1.6rem;
+  }
+  /* Pages Animes y Videojuegos */
+  .p__pages-anime, .p__pages-videojuegos {
     font-size: 1.6rem;
   }
 }/*# sourceMappingURL=style.css.map */

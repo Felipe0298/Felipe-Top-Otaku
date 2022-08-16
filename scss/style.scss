@@ -229,7 +229,13 @@ footer{
     margin-bottom: 3%;
   }
 
-  @import "mediaQueries
+  /* Pages Animes y Videojuegos */
+
+  .p__pages-anime, .p__pages-videojuegos{
+    text-align: justify;
+  }
+
+  @import "mediaQueries"
 
   
 
