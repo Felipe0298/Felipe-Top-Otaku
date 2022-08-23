@@ -25,6 +25,8 @@ body {
 .img__banner {
   width: 100%;
   height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .navbar {
@@ -90,6 +92,8 @@ header p {
   height: 45vh;
   margin: 1%;
   border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -155,6 +159,8 @@ footer {
   width: 50%;
   height: 35vh;
   border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 2%;
   -webkit-animation-name: tranparencia;
           animation-name: tranparencia;
@@ -220,6 +226,12 @@ footer {
 /* Pages Animes y Videojuegos */
 .p__pages-anime, .p__pages-videojuegos {
   text-align: justify;
+}
+
+/* Iframe */
+iframe {
+  width: 60%;
+  height: 60vh;
 }
 
 /* Pagina con tamaño de minimo 768px */

@@ -39,6 +39,7 @@ $estilos: (
 
   .img__banner{
     @include sizes(100%,30vh);
+    object-fit: cover;
     
   }
    
@@ -107,6 +108,7 @@ $estilos: (
   @include sizes(60%,45vh);
   margin: $distancia;
   border-radius: $borde;
+  object-fit: cover;
 
 }
 
@@ -175,6 +177,7 @@ footer{
 .imgs__anime, .imgs__videojuegos {
   @include sizes(50%,35vh);
   border-radius: $borde;
+  object-fit: cover;
   margin: 2%;
 
   animation-name: tranparencia;
@@ -234,6 +237,13 @@ footer{
   .p__pages-anime, .p__pages-videojuegos{
     text-align: justify;
   }
+
+  /* Iframe */
+  iframe{
+    width: 60%;
+    height: 60vh;
+  }
+
 
   @import "mediaQueries"
 
