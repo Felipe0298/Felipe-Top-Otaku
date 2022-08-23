@@ -39,7 +39,7 @@ $estilos: (
 
   .img__banner{
     @include sizes(100%,30vh);
-    object-fit: cover;
+    object-fit: fill;
     
   }
    
@@ -109,7 +109,7 @@ $estilos: (
   @include sizes(60%,45vh);
   margin: $distancia;
   border-radius: $borde;
-  object-fit: cover;
+  object-fit: fill;
 
 }
 
@@ -178,7 +178,7 @@ footer{
 .imgs__anime, .imgs__videojuegos {
   @include sizes(50%,35vh);
   border-radius: $borde;
-  object-fit: cover;
+  object-fit: fill;
   margin: 2%;
 
   animation-name: tranparencia;
@@ -244,7 +244,6 @@ footer{
     width: 60%;
     height: 60vh;
   }
-
 
   @import "mediaQueries"
 
